@@ -1,0 +1,1866 @@
+
+{
+  "schemaVersion": 1,
+  "deviceProperties": [
+    {
+      "id": 0, "name": "NVIDIA A100-PG509-200", "totalGlobalMem": 42505273344,
+      "computeMajor": 8, "computeMinor": 0,
+      "maxThreadsPerBlock": 1024, "maxThreadsPerMultiprocessor": 2048,
+      "regsPerBlock": 65536, "regsPerMultiprocessor": 65536, "warpSize": 32,
+      "sharedMemPerBlock": 49152, "sharedMemPerMultiprocessor": 167936,
+      "numSms": 108, "sharedMemPerBlockOptin": 166912
+    }
+  ],
+  "traceEvents": [
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::ones", "pid": 95225, "tid": 95225,
+    "ts": 1676047460832419, "dur": 1213,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 1,
+      "Input Dims": [[], [], [], [], []], "Input type": ["", "Scalar", "", "", "Scalar"], "python_caller_id": 3, "Call stack": "flops.py(13): do_work;<built-in method ones of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::empty", "pid": 95225, "tid": 95225,
+    "ts": 1676047460832434, "dur": 1089,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 2,
+      "Input Dims": [[], [], [], [], [], []], "Input type": ["", "Scalar", "", "", "Scalar", ""], "python_caller_id": 3, "Call stack": "flops.py(13): do_work;<built-in method ones of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::fill_", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833547, "dur": 84,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 3,
+      "Input Dims": [[8192, 8192], []], "Input type": ["float", "Scalar"], "python_caller_id": 3, "Call stack": "flops.py(13): do_work;<built-in method ones of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::matmul", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833662, "dur": 139,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 4,
+      "Input Dims": [[8192, 8192], [8192, 8192], [8192, 8192]], "Input type": ["float", "float", "float"], "Fwd thread id": 0, "Sequence number": 0, "python_caller_id": 4, "Call stack": "flops.py(13): do_work;<built-in method matmul of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::mm", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833687, "dur": 112,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 5,
+      "Input Dims": [[8192, 8192], [8192, 8192], [8192, 8192]], "Input type": ["float", "float", "float"], "Fwd thread id": 0, "Sequence number": 0, "python_caller_id": 4, "Call stack": "flops.py(13): do_work;<built-in method matmul of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::mul_", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833833, "dur": 40,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 6,
+      "Input Dims": [[8192, 8192], []], "Input type": ["float", "double"], "Fwd thread id": 0, "Sequence number": 0, "python_caller_id": 5, "Call stack": "flops.py(13): do_work;<built-in method mul_ of Tensor object at 0x7f38fd3c76a0>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::mul", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833887, "dur": 24,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 7,
+      "Input Dims": [[8192, 8192], []], "Input type": ["float", "double"], "Fwd thread id": 0, "Sequence number": 0, "python_caller_id": 6, "Call stack": "flops.py(13): do_work;<built-in method mul_ of Tensor object at 0x7f38fd3c76a0>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::add", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833928, "dur": 30,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 8,
+      "Input Dims": [[8192, 8192], [8192, 8192], []], "Input type": ["float", "float", "Scalar"], "Fwd thread id": 0, "Sequence number": 0, "python_caller_id": 54, "Call stack": "flops.py(13): do_work;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::sum", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833976, "dur": 81,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 9,
+      "Input Dims": [[8192, 8192], []], "Input type": ["float", ""], "Fwd thread id": 0, "Sequence number": 0, "python_caller_id": 7, "Call stack": "flops.py(13): do_work;<built-in method sum of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::sum", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833991, "dur": 65,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 10,
+      "Input Dims": [[8192, 8192], [], [], []], "Input type": ["float", "", "Scalar", ""], "python_caller_id": 7, "Call stack": "flops.py(13): do_work;<built-in method sum of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::as_strided", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834005, "dur": 3,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 11,
+      "Input Dims": [[], [], [], []], "Input type": ["float", "", "", ""], "python_caller_id": 7, "Call stack": "flops.py(13): do_work;<built-in method sum of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::sqrt", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834071, "dur": 24,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 12,
+      "Input Dims": [[8192, 8192]], "Input type": ["float"], "Fwd thread id": 0, "Sequence number": 0, "python_caller_id": 8, "Call stack": "flops.py(13): do_work;<built-in method sqrt of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::sin", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834105, "dur": 23,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 13,
+      "Input Dims": [[8192, 8192]], "Input type": ["float"], "Fwd thread id": 0, "Sequence number": 0, "python_caller_id": 9, "Call stack": "flops.py(13): do_work;<built-in method sin of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::sigmoid", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834137, "dur": 22,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 14,
+      "Input Dims": [[8192, 8192]], "Input type": ["float"], "Fwd thread id": 0, "Sequence number": 0, "python_caller_id": 10, "Call stack": "flops.py(13): do_work;<built-in method sigmoid of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::log10", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834170, "dur": 21,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 15,
+      "Input Dims": [[8192, 8192]], "Input type": ["float"], "Fwd thread id": 0, "Sequence number": 0, "python_caller_id": 11, "Call stack": "flops.py(13): do_work;<built-in method log10 of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::pow", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834206, "dur": 40,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 16,
+      "Input Dims": [[8192, 8192], []], "Input type": ["float", "Scalar"], "Fwd thread id": 0, "Sequence number": 0, "python_caller_id": 12, "Call stack": "flops.py(13): do_work;<built-in method pow of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::result_type", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834211, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 17,
+      "Input Dims": [[8192, 8192], []], "Input type": ["float", "Scalar"], "python_caller_id": 12, "Call stack": "flops.py(13): do_work;<built-in method pow of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "cpu_op", 
+    "name": "aten::to", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834220, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 18,
+      "Input Dims": [[8192, 8192], [], [], [], []], "Input type": ["float", "Scalar", "Scalar", "Scalar", ""], "python_caller_id": 12, "Call stack": "flops.py(13): do_work;<built-in method pow of type object at 0x7f395337e200>;"
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/autograd/profiler.py(205): _start_trace", "pid": 95225, "tid": 95225,
+    "ts": 1676047460832249, "dur": 16,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 0, "Python parent id": 1, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/autograd/profiler.py(194): __enter__", "pid": 95225, "tid": 95225,
+    "ts": 1676047460832248, "dur": 18,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 1, "Python parent id": null, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function time>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460832272, "dur": 5,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 2, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method ones of type object at 0x7f395337e200>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460832292, "dur": 1352,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 3, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method matmul of type object at 0x7f395337e200>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833648, "dur": 155,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 4, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method mul_ of Tensor object at 0x7f38fd3c76a0>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833805, "dur": 72,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 5, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method mul_ of Tensor object at 0x7f38fd3c76a0>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833878, "dur": 37,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 6, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method sum of type object at 0x7f395337e200>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833962, "dur": 97,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 7, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method sqrt of type object at 0x7f395337e200>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834063, "dur": 34,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 8, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method sin of type object at 0x7f395337e200>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834099, "dur": 31,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 9, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method sigmoid of type object at 0x7f395337e200>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834132, "dur": 28,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 10, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method log10 of type object at 0x7f395337e200>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834163, "dur": 30,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 11, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method pow of type object at 0x7f395337e200>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834195, "dur": 55,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 12, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_isInBadFork>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834261, "dur": 3,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 13, "Python parent id": 14, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(149): is_initialized", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834259, "dur": 6,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 14, "Python parent id": 15, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(191): _lazy_init", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834258, "dur": 8,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 15, "Python parent id": 52, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834273, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 16, "Python parent id": 38, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834276, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 17, "Python parent id": 38, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_jit_internal.py(958): is_scripting", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834279, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 18, "Python parent id": 38, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834281, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 19, "Python parent id": 38, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834285, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 20, "Python parent id": 37, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834287, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 21, "Python parent id": 37, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834287, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 22, "Python parent id": 37, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_jit_internal.py(958): is_scripting", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834288, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 23, "Python parent id": 37, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function hasattr>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834298, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 24, "Python parent id": 26, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_getDeviceCount>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834300, "dur": 3,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 25, "Python parent id": 26, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(77): is_available", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834296, "dur": 7,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 26, "Python parent id": 27, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py(464): _get_available_device_type", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834294, "dur": 10,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 27, "Python parent id": 35, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method lower of str object at 0x7f3994114ab0>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834308, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 28, "Python parent id": 35, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_isInBadFork>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834316, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 29, "Python parent id": 30, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(149): is_initialized", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834316, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 30, "Python parent id": 31, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(191): _lazy_init", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834316, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 31, "Python parent id": 33, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_getDevice>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834318, "dur": 4,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 32, "Python parent id": 33, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(480): current_device", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834312, "dur": 10,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 33, "Python parent id": 34, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py(481): <lambda>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834311, "dur": 12,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 34, "Python parent id": 35, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py(471): _get_device_attr", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834293, "dur": 30,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 35, "Python parent id": 36, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py(479): _get_current_device_index", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834290, "dur": 34,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 36, "Python parent id": 37, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py(503): _get_device_index", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834283, "dur": 41,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 37, "Python parent id": 38, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/_utils.py(7): _get_device_index", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834271, "dur": 53,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 38, "Python parent id": 39, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(268): __init__", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834269, "dur": 58,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 39, "Python parent id": 52, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_isInBadFork>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834331, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 40, "Python parent id": 41, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(149): is_initialized", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834331, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 41, "Python parent id": 42, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(191): _lazy_init", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834331, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 42, "Python parent id": 44, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_getDevice>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834333, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 43, "Python parent id": 44, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(480): current_device", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834330, "dur": 4,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 44, "Python parent id": 49, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_jit_internal.py(958): is_scripting", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834335, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 45, "Python parent id": 49, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_isInBadFork>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834336, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 46, "Python parent id": 47, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(149): is_initialized", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834335, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 47, "Python parent id": 48, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(191): _lazy_init", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834335, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 48, "Python parent id": 49, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(272): __enter__", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834329, "dur": 8,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 49, "Python parent id": 52, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_synchronize>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834338, "dur": 60473,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 50, "Python parent id": 52, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(281): __exit__", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894813, "dur": 7,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 51, "Python parent id": 52, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(486): synchronize", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834254, "dur": 60567,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 52, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function time>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894823, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 53, "Python parent id": 54, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "flops.py(13): do_work", "pid": 95225, "tid": 95225,
+    "ts": 1676047460832270, "dur": 62556,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 54, "Python parent id": null, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function print>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894849, "dur": 36,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 55, "Python parent id": null, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_isInBadFork>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894894, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 56, "Python parent id": 57, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(149): is_initialized", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894893, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 57, "Python parent id": 58, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(191): _lazy_init", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894891, "dur": 4,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 58, "Python parent id": 95, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894899, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 59, "Python parent id": 81, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894901, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 60, "Python parent id": 81, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_jit_internal.py(958): is_scripting", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894903, "dur": 4,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 61, "Python parent id": 81, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894908, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 62, "Python parent id": 81, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894911, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 63, "Python parent id": 80, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894911, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 64, "Python parent id": 80, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function isinstance>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894912, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 65, "Python parent id": 80, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_jit_internal.py(958): is_scripting", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894913, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 66, "Python parent id": 80, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function hasattr>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894920, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 67, "Python parent id": 69, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_getDeviceCount>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894921, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 68, "Python parent id": 69, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(77): is_available", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894918, "dur": 5,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 69, "Python parent id": 70, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py(464): _get_available_device_type", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894917, "dur": 7,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 70, "Python parent id": 78, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method lower of str object at 0x7f3994114ab0>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894926, "dur": 4,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 71, "Python parent id": 78, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_isInBadFork>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894933, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 72, "Python parent id": 73, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(149): is_initialized", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894933, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 73, "Python parent id": 74, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(191): _lazy_init", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894932, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 74, "Python parent id": 76, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_getDevice>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894935, "dur": 5,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 75, "Python parent id": 76, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(480): current_device", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894932, "dur": 9,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 76, "Python parent id": 77, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py(481): <lambda>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894931, "dur": 10,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 77, "Python parent id": 78, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py(471): _get_device_attr", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894916, "dur": 25,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 78, "Python parent id": 79, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py(479): _get_current_device_index", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894914, "dur": 28,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 79, "Python parent id": 80, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_utils.py(503): _get_device_index", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894910, "dur": 32,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 80, "Python parent id": 81, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/_utils.py(7): _get_device_index", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894898, "dur": 45,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 81, "Python parent id": 82, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(268): __init__", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894897, "dur": 47,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 82, "Python parent id": 95, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_isInBadFork>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894947, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 83, "Python parent id": 84, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(149): is_initialized", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894946, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 84, "Python parent id": 85, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(191): _lazy_init", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894946, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 85, "Python parent id": 87, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_getDevice>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894948, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 86, "Python parent id": 87, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(480): current_device", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894946, "dur": 3,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 87, "Python parent id": 92, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/_jit_internal.py(958): is_scripting", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894950, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 88, "Python parent id": 92, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_isInBadFork>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894951, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 89, "Python parent id": 90, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(149): is_initialized", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894951, "dur": 0,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 90, "Python parent id": 91, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(191): _lazy_init", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894950, "dur": 2,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 91, "Python parent id": 92, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(272): __enter__", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894945, "dur": 7,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 92, "Python parent id": 95, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in function _cuda_synchronize>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894953, "dur": 8,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 93, "Python parent id": 95, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(281): __exit__", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894961, "dur": 1,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 94, "Python parent id": 95, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/cuda/__init__.py(486): synchronize", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894891, "dur": 72,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 95, "Python parent id": 97, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "<built-in method _disable_profiler of PyCapsule object at 0x7f3912bca880>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894963, "dur": 563,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 96, "Python parent id": 97, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "miniconda3/envs/pytorch/lib/python3.10/site-packages/torch/autograd/profiler.py(207): __exit__", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894887, "dur": 639,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 97, "Python parent id": null, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "python_function", 
+    "name": "flops.py(13): <module>", "pid": 95225, "tid": 95225,
+    "ts": 1676047460832245, "dur": 63281,
+    "args": {
+      "Trace name": "PyTorch Profiler", "Trace iteration": 0,
+      "External id": 0,
+      "Python id": 98, "Python parent id": null, "Python thread": 0
+    }
+  },
+  {
+    "ph": "X", "cat": "Kernel", 
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::FillFunctor<float>, at::detail::Array<char*, 1> >(int, at::native::FillFunctor<float>, at::detail::Array<char*, 1>)", "pid": 0, "tid": 7,
+    "ts": 1676047460833626, "dur": 174,
+    "args": {
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 8,
+      "registers per thread": 16,
+      "shared memory": 0,
+      "blocks per SM": 1213.6296,
+      "warps per SM": 4854.5186,
+      "grid": [131072, 1, 1],
+      "block": [128, 1, 1],
+      "est. achieved occupancy %": 100
+    }
+  },
+  {
+    "ph": "f", "id": 8, "pid": 0, "tid": 7, "ts": 1676047460833626,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaLaunchKernel", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833572, "dur": 55,
+    "args": {
+      "External id": 8,
+      
+      "cbid": 211, "correlation": 8
+    }
+  },
+  {
+    "ph": "s", "id": 8, "pid": 95225, "tid": 95225, "ts": 1676047460833572,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833756, "dur": 4,
+    "args": {
+      "External id": 14,
+      
+      "cbid": 251, "correlation": 14
+    }
+  },
+  {
+    "ph": "f", "id": 14, "pid": 95225, "tid": 95225, "ts": 1676047460833756,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaOccupancyMaxActiveBlocksPerMultiprocessorWithFlags", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833763, "dur": 0,
+    "args": {
+      "External id": 15,
+      
+      "cbid": 251, "correlation": 15
+    }
+  },
+  {
+    "ph": "f", "id": 15, "pid": 95225, "tid": 95225, "ts": 1676047460833763,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "Kernel", 
+    "name": "ampere_sgemm_128x128_nn", "pid": 0, "tid": 7,
+    "ts": 1676047460833802, "dur": 57305,
+    "args": {
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 16,
+      "registers per thread": 118,
+      "shared memory": 16640,
+      "blocks per SM": 37.925926,
+      "warps per SM": 303.4074,
+      "grid": [64, 64, 1],
+      "block": [256, 1, 1],
+      "est. achieved occupancy %": 25
+    }
+  },
+  {
+    "ph": "f", "id": 16, "pid": 0, "tid": 7, "ts": 1676047460833802,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaLaunchKernel", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833770, "dur": 24,
+    "args": {
+      "External id": 16,
+      
+      "cbid": 211, "correlation": 16
+    }
+  },
+  {
+    "ph": "s", "id": 16, "pid": 95225, "tid": 95225, "ts": 1676047460833770,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "Kernel", 
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::MulFunctor<float> >, at::detail::Array<char*, 2> >(int, at::native::BUnaryFunctor<float, float, float, at::native::MulFunctor<float> >, at::detail::Array<char*, 2>)", "pid": 0, "tid": 7,
+    "ts": 1676047460891109, "dur": 382,
+    "args": {
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 21,
+      "registers per thread": 16,
+      "shared memory": 0,
+      "blocks per SM": 1213.6296,
+      "warps per SM": 4854.5186,
+      "grid": [131072, 1, 1],
+      "block": [128, 1, 1],
+      "est. achieved occupancy %": 100
+    }
+  },
+  {
+    "ph": "f", "id": 21, "pid": 0, "tid": 7, "ts": 1676047460891109,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaLaunchKernel", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833859, "dur": 11,
+    "args": {
+      "External id": 21,
+      
+      "cbid": 211, "correlation": 21
+    }
+  },
+  {
+    "ph": "s", "id": 21, "pid": 95225, "tid": 95225, "ts": 1676047460833859,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "Kernel", 
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::BUnaryFunctor<float, float, float, at::native::MulFunctor<float> >, at::detail::Array<char*, 2> >(int, at::native::BUnaryFunctor<float, float, float, at::native::MulFunctor<float> >, at::detail::Array<char*, 2>)", "pid": 0, "tid": 7,
+    "ts": 1676047460891492, "dur": 391,
+    "args": {
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 29,
+      "registers per thread": 16,
+      "shared memory": 0,
+      "blocks per SM": 1213.6296,
+      "warps per SM": 4854.5186,
+      "grid": [131072, 1, 1],
+      "block": [128, 1, 1],
+      "est. achieved occupancy %": 100
+    }
+  },
+  {
+    "ph": "f", "id": 29, "pid": 0, "tid": 7, "ts": 1676047460891492,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaLaunchKernel", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833903, "dur": 6,
+    "args": {
+      "External id": 29,
+      
+      "cbid": 211, "correlation": 29
+    }
+  },
+  {
+    "ph": "s", "id": 29, "pid": 95225, "tid": 95225, "ts": 1676047460833903,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "Kernel", 
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3> >(int, at::native::CUDAFunctor_add<float>, at::detail::Array<char*, 3>)", "pid": 0, "tid": 7,
+    "ts": 1676047460891885, "dur": 596,
+    "args": {
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 37,
+      "registers per thread": 20,
+      "shared memory": 0,
+      "blocks per SM": 1213.6296,
+      "warps per SM": 4854.5186,
+      "grid": [131072, 1, 1],
+      "block": [128, 1, 1],
+      "est. achieved occupancy %": 100
+    }
+  },
+  {
+    "ph": "f", "id": 37, "pid": 0, "tid": 7, "ts": 1676047460891885,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaLaunchKernel", "pid": 95225, "tid": 95225,
+    "ts": 1676047460833944, "dur": 11,
+    "args": {
+      "External id": 37,
+      
+      "cbid": 211, "correlation": 37
+    }
+  },
+  {
+    "ph": "s", "id": 37, "pid": 95225, "tid": 95225, "ts": 1676047460833944,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "Memset", 
+    "name": "Memset (Device)", "pid": 0, "tid": 7,
+    "ts": 1676047460892484, "dur": 2,
+    "args": {
+      "device": 0, "context": 1,
+      "stream": 7, "correlation": 50,
+      "bytes": 4, "memory bandwidth (GB/s)": 0.001984126984126984
+    }
+  },
+  {
+    "ph": "f", "id": 50, "pid": 0, "tid": 7, "ts": 1676047460892484,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaMemsetAsync", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834022, "dur": 16,
+    "args": {
+      "External id": 50,
+      
+      "cbid": 51, "correlation": 50
+    }
+  },
+  {
+    "ph": "s", "id": 50, "pid": 95225, "tid": 95225, "ts": 1676047460834022,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "Kernel", 
+    "name": "void at::native::reduce_kernel<512, 1, at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4> >(at::native::ReduceOp<float, at::native::func_wrapper_t<float, at::native::sum_functor<float, float, float>::operator()(at::TensorIterator&)::{lambda(float, float)#1}>, unsigned int, float, 4>)", "pid": 0, "tid": 7,
+    "ts": 1676047460892488, "dur": 219,
+    "args": {
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 52,
+      "registers per thread": 28,
+      "shared memory": 2064,
+      "blocks per SM": 4.740741,
+      "warps per SM": 75.85185,
+      "grid": [1, 512, 1],
+      "block": [512, 1, 1],
+      "est. achieved occupancy %": 100
+    }
+  },
+  {
+    "ph": "f", "id": 52, "pid": 0, "tid": 7, "ts": 1676047460892488,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaLaunchKernel", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834042, "dur": 8,
+    "args": {
+      "External id": 52,
+      
+      "cbid": 211, "correlation": 52
+    }
+  },
+  {
+    "ph": "s", "id": 52, "pid": 95225, "tid": 95225, "ts": 1676047460834042,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "Kernel", 
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::sqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#4}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::sqrt_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#4}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)", "pid": 0, "tid": 7,
+    "ts": 1676047460892709, "dur": 377,
+    "args": {
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 60,
+      "registers per thread": 23,
+      "shared memory": 0,
+      "blocks per SM": 1213.6296,
+      "warps per SM": 4854.5186,
+      "grid": [131072, 1, 1],
+      "block": [128, 1, 1],
+      "est. achieved occupancy %": 100
+    }
+  },
+  {
+    "ph": "f", "id": 60, "pid": 0, "tid": 7, "ts": 1676047460892709,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaLaunchKernel", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834084, "dur": 8,
+    "args": {
+      "External id": 60,
+      
+      "cbid": 211, "correlation": 60
+    }
+  },
+  {
+    "ph": "s", "id": 60, "pid": 95225, "tid": 95225, "ts": 1676047460834084,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "Kernel", 
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::sin_kernel_cuda(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#4}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::sin_kernel_cuda(at::TensorIteratorBase&)::{lambda()#1}::operator()() const::{lambda()#4}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)", "pid": 0, "tid": 7,
+    "ts": 1676047460893087, "dur": 481,
+    "args": {
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 68,
+      "registers per thread": 24,
+      "shared memory": 0,
+      "blocks per SM": 1213.6296,
+      "warps per SM": 4854.5186,
+      "grid": [131072, 1, 1],
+      "block": [128, 1, 1],
+      "est. achieved occupancy %": 100
+    }
+  },
+  {
+    "ph": "f", "id": 68, "pid": 0, "tid": 7, "ts": 1676047460893087,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaLaunchKernel", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834117, "dur": 8,
+    "args": {
+      "External id": 68,
+      
+      "cbid": 211, "correlation": 68
+    }
+  },
+  {
+    "ph": "s", "id": 68, "pid": 95225, "tid": 95225, "ts": 1676047460834117,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "Kernel", 
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::sigmoid_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#4}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::sigmoid_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#4}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)", "pid": 0, "tid": 7,
+    "ts": 1676047460893570, "dur": 391,
+    "args": {
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 76,
+      "registers per thread": 23,
+      "shared memory": 0,
+      "blocks per SM": 1213.6296,
+      "warps per SM": 4854.5186,
+      "grid": [131072, 1, 1],
+      "block": [128, 1, 1],
+      "est. achieved occupancy %": 100
+    }
+  },
+  {
+    "ph": "f", "id": 76, "pid": 0, "tid": 7, "ts": 1676047460893570,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaLaunchKernel", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834149, "dur": 8,
+    "args": {
+      "External id": 76,
+      
+      "cbid": 211, "correlation": 76
+    }
+  },
+  {
+    "ph": "s", "id": 76, "pid": 95225, "tid": 95225, "ts": 1676047460834149,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "Kernel", 
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::log10_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#4}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2> >(int, at::native::log10_kernel_cuda(at::TensorIteratorBase&)::{lambda()#2}::operator()() const::{lambda()#4}::operator()() const::{lambda(float)#1}, at::detail::Array<char*, 2>)", "pid": 0, "tid": 7,
+    "ts": 1676047460893963, "dur": 388,
+    "args": {
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 84,
+      "registers per thread": 24,
+      "shared memory": 0,
+      "blocks per SM": 1213.6296,
+      "warps per SM": 4854.5186,
+      "grid": [131072, 1, 1],
+      "block": [128, 1, 1],
+      "est. achieved occupancy %": 100
+    }
+  },
+  {
+    "ph": "f", "id": 84, "pid": 0, "tid": 7, "ts": 1676047460893963,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaLaunchKernel", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834181, "dur": 7,
+    "args": {
+      "External id": 84,
+      
+      "cbid": 211, "correlation": 84
+    }
+  },
+  {
+    "ph": "s", "id": 84, "pid": 95225, "tid": 95225, "ts": 1676047460834181,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "Kernel", 
+    "name": "void at::native::vectorized_elementwise_kernel<4, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#4}, at::detail::Array<char*, 2> >(int, at::native::(anonymous namespace)::pow_tensor_scalar_kernel_impl<float, float>(at::TensorIteratorBase&, float)::{lambda(float)#4}, at::detail::Array<char*, 2>)", "pid": 0, "tid": 7,
+    "ts": 1676047460894352, "dur": 445,
+    "args": {
+      "queued": 0, "device": 0, "context": 1,
+      "stream": 7, "correlation": 92,
+      "registers per thread": 23,
+      "shared memory": 0,
+      "blocks per SM": 1213.6296,
+      "warps per SM": 4854.5186,
+      "grid": [131072, 1, 1],
+      "block": [128, 1, 1],
+      "est. achieved occupancy %": 100
+    }
+  },
+  {
+    "ph": "f", "id": 92, "pid": 0, "tid": 7, "ts": 1676047460894352,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaLaunchKernel", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834234, "dur": 9,
+    "args": {
+      "External id": 92,
+      
+      "cbid": 211, "correlation": 92
+    }
+  },
+  {
+    "ph": "s", "id": 92, "pid": 95225, "tid": 95225, "ts": 1676047460834234,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaDeviceSynchronize", "pid": 95225, "tid": 95225,
+    "ts": 1676047460834341, "dur": 60465,
+    "args": {
+      "External id": 97,
+      
+      "cbid": 165, "correlation": 97
+    }
+  },
+  {
+    "ph": "f", "id": 97, "pid": 95225, "tid": 95225, "ts": 1676047460834341,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "ph": "X", "cat": "cuda_runtime", 
+    "name": "cudaDeviceSynchronize", "pid": 95225, "tid": 95225,
+    "ts": 1676047460894954, "dur": 7,
+    "args": {
+      "External id": 100,
+      
+      "cbid": 165, "correlation": 100
+    }
+  },
+  {
+    "ph": "f", "id": 100, "pid": 95225, "tid": 95225, "ts": 1676047460894954,
+    "cat": "async_cpu_to_gpu", "name": "async_gpu", "bp": "e"
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1676047460832260, "pid": 95225, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1676047460832260, "pid": 95225, "tid": 0,
+    "args": {
+      "labels": "CPU"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 95225, "tid": 0,
+    "args": {
+      "sort_index": 95225
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1676047460832260, "pid": 0, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1676047460832260, "pid": 0, "tid": 0,
+    "args": {
+      "labels": "GPU 0"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 0, "tid": 0,
+    "args": {
+      "sort_index": 16777216
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1676047460832260, "pid": 1, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1676047460832260, "pid": 1, "tid": 0,
+    "args": {
+      "labels": "GPU 1"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 1, "tid": 0,
+    "args": {
+      "sort_index": 16777217
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1676047460832260, "pid": 2, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1676047460832260, "pid": 2, "tid": 0,
+    "args": {
+      "labels": "GPU 2"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 2, "tid": 0,
+    "args": {
+      "sort_index": 16777218
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1676047460832260, "pid": 3, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1676047460832260, "pid": 3, "tid": 0,
+    "args": {
+      "labels": "GPU 3"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 3, "tid": 0,
+    "args": {
+      "sort_index": 16777219
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1676047460832260, "pid": 4, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1676047460832260, "pid": 4, "tid": 0,
+    "args": {
+      "labels": "GPU 4"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 4, "tid": 0,
+    "args": {
+      "sort_index": 16777220
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1676047460832260, "pid": 5, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1676047460832260, "pid": 5, "tid": 0,
+    "args": {
+      "labels": "GPU 5"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 5, "tid": 0,
+    "args": {
+      "sort_index": 16777221
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1676047460832260, "pid": 6, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1676047460832260, "pid": 6, "tid": 0,
+    "args": {
+      "labels": "GPU 6"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 6, "tid": 0,
+    "args": {
+      "sort_index": 16777222
+    }
+  },
+  {
+    "name": "process_name", "ph": "M", "ts": 1676047460832260, "pid": 7, "tid": 0,
+    "args": {
+      "name": "python3"
+    }
+  },
+  {
+    "name": "process_labels", "ph": "M", "ts": 1676047460832260, "pid": 7, "tid": 0,
+    "args": {
+      "labels": "GPU 7"
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 7, "tid": 0,
+    "args": {
+      "sort_index": 16777223
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 1676047460832260, "pid": 0, "tid": 7,
+    "args": {
+      "name": "stream 7 "
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 0, "tid": 7,
+    "args": {
+      "sort_index": 7
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 1676047460832260, "pid": 95225, "tid": 95225,
+    "args": {
+      "name": "thread 95225 (python3)"
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 95225, "tid": 95225,
+    "args": {
+      "sort_index": 95225
+    }
+  },
+  {
+    "name": "thread_name", "ph": "M", "ts": 1676047460832260, "pid": 95225, "tid": 95225,
+    "args": {
+      "name": "thread 95225 (python3)"
+    }
+  },
+  {
+    "name": "thread_sort_index", "ph": "M", "ts": 1676047460832260, "pid": 95225, "tid": 95225,
+    "args": {
+      "sort_index": 95225
+    }
+  },
+  {
+    "ph": "X", "cat": "Trace", "ts": 1676047460831496, "dur": 63479,
+    "pid": "Spans", "tid": "PyTorch Profiler",
+    "name": "PyTorch Profiler (0)",
+    "args": {
+      "Op count": 0
+    }
+  },
+  {
+    "name": "process_sort_index", "ph": "M", "ts": 1676047460831496,
+    "pid": "Spans", "tid": 0,
+    "args": {
+      "sort_index": 536870912
+    }
+  },
+  {
+    "name": "Iteration Start: PyTorch Profiler", "ph": "i", "s": "g",
+    "pid": "Traces", "tid": "Trace PyTorch Profiler", "ts": 1676047460831496
+  },
+  {
+    "name": "Record Window End", "ph": "i", "s": "g",
+    "pid": "", "tid": "", "ts": 1676047460895754
+  }
+  ],
+  "traceName": "./flops.json"
+}
